@@ -3,16 +3,85 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:8889
--- Generation Time: Jul 12, 2015 at 03:39 AM
+-- Generation Time: Jul 20, 2015 at 02:11 PM
 -- Server version: 5.5.42
 -- PHP Version: 5.6.10
-
+use acdb;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
 -- Database: `acdb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ac_akeeba_common`
+--
+
+CREATE TABLE `ac_akeeba_common` (
+  `key` varchar(255) NOT NULL,
+  `value` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ac_ak_profiles`
+--
+
+CREATE TABLE `ac_ak_profiles` (
+  `id` int(10) unsigned NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `configuration` longtext,
+  `filters` longtext
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `ac_ak_profiles`
+--
+
+INSERT INTO `ac_ak_profiles` (`id`, `description`, `configuration`, `filters`) VALUES
+(1, 'Default Backup Profile', '###AES128###Orca4Ve73SHkLbaKK1KA53cZG2ocfEUB0NnVeHHvlrZcvJPBxgpRs0EvnZLxCOni4uYUB5AoPTZbrEQ/nhxl+P+rGjCWvBsfT+7W5r0/wblj8bu0mPNQXlSyxqdQc6i/slEZTOoWMSZ2ZZufPbqrqwR2Bb6nUMrHYHrTbzltgOE0gUOMS5ZuM6QBW2rWDP1cb0XWA1OjXGt1TKYPYmsyU9VBVDAvKaXsh7k3XYIAe+dOOZsyQjXJirSHRBFc9RXe87ggbpQ+piz6E5Y2HvX7y90GTbvWJFD86zL4Osi7xmkw6U64abH7JYYqGzToCkcCI4k75DUJ3YrGsqcMj3epiKh2XLhfYRj4AFkpVJ4EfDonvp4Hdb/7RrNIKS0TKimJaPlZIPMFvHdpU6hRvhDaPqSm6tJlwvZvzUiW2AZbA7JTSKT7FouRHDFGHaI4TL/TNw7qaIM6/644REsltkB/q/r8pVd30TwQExrs86NA8udiQ0HM68WPiR6PIKaHqjBGNr5jDFdmGWZw/vrDfYVEXU6d94Lz2MEwXjhCRh/WiGBD4WxzqZBGZS9wBRFRA7EwRo/MVdyczVzP958y7BlkQH/NBksdOHtGPrz+JGD50xpRijAxrAbtgBLEd7fJA0rffDzqPKj2q9bbOMSN+UqcS5ckQvXFXwsO8Mw+gj8zPYicnf9RmCR95z9n+M5iNSDa5ceeyuLI9UM9uzGy7COPX9OoxQ9OvfaIu4FjsXYuF99u8tWK0i81i8qbkaMgNpFMXQ19VrkObOgk76W+pfibUGCsaNHJox2/+pxjIcbXqbmuOUrlBu3/uVh7C9+TbFzg1N3SUKLugnQ6dF2UZDFH41+dosUen2628j29JQn/ZDokHnvmdUXv4MpyleqSt/N8Pr5bQWZ40FQwxcgi6yMCYFRAq75YmlyUVRLYjSFviA5tQwlZDGiv11jlCCPtuwM5K0BCvXQh9QKesmSbP7dc/M0zfpEV2HFpuZMV/wluo/c8FVo4IulDDchT844/ablJ2ZqK4Fv5ze4TX3kKeUwIQa8giRCnvvi/M8XEdMPBTfG8CE34mt6aOBaQIaMvy6fgXaQaTza8ejw+FDXdXDdCNzPoC+alank9myCK6TfdcKYuA9/fYIcMgJMHPNr3csRE2jp4bKEVQgMPI8fS9NJ8O0UgdHDWp6oWY9bjVkj615nMG4yK5T6yjyDUqyD4J02B0auKLXf52FIj7NNtqWzNVMXkhsWoTcj1BAtEhmrkKi+q/edhlxUFY9twBAsfTpGUQfgyHZZQTDyBvB1OVu02PL66X2xGIhEJjJN3JgkNlSrOZAd1p02XbO2+wzv4YqLZSOmgGPwY5nSieXy6Z33AE+2vtoRMCa6C4ZsbaqZ5zAhcGStiIfm27GhtH1FHGyjC6oYH3WkRkMHaCcBp46KtwiIxKt8iDRs6OfOiMVHkGGBGxpGS/k7EBwIkkpK1LlnyrNnPZUAzZgPxb4uPe1mXFYyS3sAlPZoWGnc+SeAtJm5c5I4SxdYuH2AnxQgZMk3w5n18nVjsnGWOINtcWQfz7Q6JyM1Nkk8TALwwpXAsAwhO5fjtj5eUUQGRURTt/oeSSUCNh5uyAYDKz4vBNrnCVgvVYVKL6QMEytOyuPLbOHRwKMfqwlgAvqBMeb3skceVwQXgtx6W6LPJWZRc8jqy0CI9cQmoVLJdIJYsi3BsSSPVGEz2nGj2F5n2IhQg/7pHuMpJPk67q8CQypQgmfi0cefcWtV6Z2lsiTd0/SBbes6J21nTorgiYEKUJKrXuz8v7Ychb/ZEMXje7vyHejIImc3upoQNJyniGMFqXcVDgAX5Wb1ofCV8blea2XZ0ZWSMtOe+oUgFGiQZHbL6+OlBS954tfW42CARZ0F+BvAi73nwsuWA7i32BlpBveNmqcU1npFI1AEbPxLk3bDeYh0OcG2tGiXegZ6sqcuBkXBDR+i0Whve8Ue2oIhmytyqBoMVmLxwiBWGd/63GAEi4MTiIhLtHWZd7b1iO/GiucZA+wevtte3sNy3OBfdXXgE287fZot8GxbUOWWA5K1nBnu8HAxbHOoR0Ppf5LwDOpn4KHmcNs6QHyYUv7T17NwPEutX7SjzgtXNNkxsuQDDcFN6ZANSdMh3COn9GDstwwNF/drnd1L6Dl4iD8oOeg2QiXjolpUJRJVPu9rAa/+/gBz0kgNmc3Uu6irYULwfuhGO/X4ogAb5qzTPSYZVfyTkHOoFcs6Ohhr9EmCraf32b96115gGAAA=', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ac_ak_stats`
+--
+
+CREATE TABLE `ac_ak_stats` (
+  `id` bigint(20) unsigned NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `comment` longtext,
+  `backupstart` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `backupend` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `status` enum('run','fail','complete') NOT NULL DEFAULT 'run',
+  `origin` varchar(30) NOT NULL DEFAULT 'backend',
+  `type` varchar(30) NOT NULL DEFAULT 'full',
+  `profile_id` bigint(20) NOT NULL DEFAULT '1',
+  `archivename` longtext,
+  `absolute_path` longtext,
+  `multipart` int(11) NOT NULL DEFAULT '0',
+  `tag` varchar(255) DEFAULT NULL,
+  `backupid` varchar(255) DEFAULT NULL,
+  `filesexist` tinyint(3) NOT NULL DEFAULT '1',
+  `remote_filename` varchar(1000) DEFAULT NULL,
+  `total_size` bigint(20) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ac_ak_storage`
+--
+
+CREATE TABLE `ac_ak_storage` (
+  `tag` varchar(255) NOT NULL,
+  `lastupdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `data` longtext
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -29,14 +98,14 @@ CREATE TABLE `ac_assets` (
   `name` varchar(50) NOT NULL COMMENT 'The unique name for the asset.\n',
   `title` varchar(100) NOT NULL COMMENT 'The descriptive title for the asset.',
   `rules` varchar(5120) NOT NULL COMMENT 'JSON encoded access control.'
-) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ac_assets`
 --
 
 INSERT INTO `ac_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `title`, `rules`) VALUES
-(1, 0, 0, 123, 0, 'root.1', 'Root Asset', '{"core.login.site":{"6":1,"2":1},"core.login.admin":{"6":1},"core.login.offline":{"6":1},"core.admin":{"8":1},"core.manage":{"7":1},"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
+(1, 0, 0, 125, 0, 'root.1', 'Root Asset', '{"core.login.site":{"6":1,"2":1},"core.login.admin":{"6":1},"core.login.offline":{"6":1},"core.admin":{"8":1},"core.manage":{"7":1},"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
 (2, 1, 1, 2, 1, 'com_admin', 'com_admin', '{}'),
 (3, 1, 3, 6, 1, 'com_banners', 'com_banners', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (4, 1, 7, 8, 1, 'com_cache', 'com_cache', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
@@ -97,7 +166,8 @@ INSERT INTO `ac_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `titl
 (61, 27, 19, 20, 3, 'com_content.article.1', 'Getting Started', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
 (62, 1, 121, 122, 1, '#__ucm_content.1', '#__ucm_content.1', '[]'),
 (63, 8, 22, 23, 2, 'com_content.category.8', 'Services', '{"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
-(64, 8, 24, 25, 2, 'com_content.category.9', 'Articles', '{"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}');
+(64, 8, 24, 25, 2, 'com_content.category.9', 'Articles', '{"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
+(65, 1, 123, 124, 1, 'com_akeeba', 'Akeeba', '{}');
 
 -- --------------------------------------------------------
 
@@ -109,42 +179,6 @@ CREATE TABLE `ac_associations` (
   `id` int(11) NOT NULL COMMENT 'A reference to the associated item.',
   `context` varchar(50) NOT NULL COMMENT 'The context of the associated item.',
   `key` char(32) NOT NULL COMMENT 'The key for the association computed from an md5 on associated ids.'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `ac_banner_clients`
---
-
-CREATE TABLE `ac_banner_clients` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL DEFAULT '',
-  `contact` varchar(255) NOT NULL DEFAULT '',
-  `email` varchar(255) NOT NULL DEFAULT '',
-  `extrainfo` text NOT NULL,
-  `state` tinyint(3) NOT NULL DEFAULT '0',
-  `checked_out` int(10) unsigned NOT NULL DEFAULT '0',
-  `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `metakey` text NOT NULL,
-  `own_prefix` tinyint(4) NOT NULL DEFAULT '0',
-  `metakey_prefix` varchar(255) NOT NULL DEFAULT '',
-  `purchase_type` tinyint(4) NOT NULL DEFAULT '-1',
-  `track_clicks` tinyint(4) NOT NULL DEFAULT '-1',
-  `track_impressions` tinyint(4) NOT NULL DEFAULT '-1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `ac_banner_tracks`
---
-
-CREATE TABLE `ac_banner_tracks` (
-  `track_date` datetime NOT NULL,
-  `track_type` int(10) unsigned NOT NULL,
-  `banner_id` int(10) unsigned NOT NULL,
-  `count` int(10) unsigned NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -188,6 +222,42 @@ CREATE TABLE `ac_banners` (
   `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified_by` int(10) unsigned NOT NULL DEFAULT '0',
   `version` int(10) unsigned NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ac_banner_clients`
+--
+
+CREATE TABLE `ac_banner_clients` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL DEFAULT '',
+  `contact` varchar(255) NOT NULL DEFAULT '',
+  `email` varchar(255) NOT NULL DEFAULT '',
+  `extrainfo` text NOT NULL,
+  `state` tinyint(3) NOT NULL DEFAULT '0',
+  `checked_out` int(10) unsigned NOT NULL DEFAULT '0',
+  `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `metakey` text NOT NULL,
+  `own_prefix` tinyint(4) NOT NULL DEFAULT '0',
+  `metakey_prefix` varchar(255) NOT NULL DEFAULT '',
+  `purchase_type` tinyint(4) NOT NULL DEFAULT '-1',
+  `track_clicks` tinyint(4) NOT NULL DEFAULT '-1',
+  `track_impressions` tinyint(4) NOT NULL DEFAULT '-1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ac_banner_tracks`
+--
+
+CREATE TABLE `ac_banner_tracks` (
+  `track_date` datetime NOT NULL,
+  `track_type` int(10) unsigned NOT NULL,
+  `banner_id` int(10) unsigned NOT NULL,
+  `count` int(10) unsigned NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -336,7 +406,29 @@ CREATE TABLE `ac_content` (
 --
 
 INSERT INTO `ac_content` (`id`, `asset_id`, `title`, `alias`, `introtext`, `fulltext`, `state`, `catid`, `created`, `created_by`, `created_by_alias`, `modified`, `modified_by`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `images`, `urls`, `attribs`, `version`, `ordering`, `metakey`, `metadesc`, `access`, `hits`, `metadata`, `featured`, `language`, `xreference`) VALUES
-(1, 61, 'Getting Started', 'getting-started', '<p>It''s easy to get started creating your website. Knowing some of the basics will help.</p><h3>What is a Content Management System?</h3><p>A content management system is software that allows you to create and manage webpages easily by separating the creation of your content from the mechanics required to present it on the web.</p><p>In this site, the content is stored in a <em>database</em>. The look and feel are created by a <em>template</em>. Joomla! brings together the template and your content to create web pages.</p><h3>Logging in</h3><p>To login to your site use the user name and password that were created as part of the installation process. Once logged-in you will be able to create and edit articles and modify some settings.</p><h3>Creating an article</h3><p>Once you are logged-in, a new menu will be visible. To create a new article, click on the "Submit Article" link on that menu.</p><p>The new article interface gives you a lot of options, but all you need to do is add a title and put something in the content area. To make it easy to find, set the state to published.</p><div>You can edit an existing article by clicking on the edit icon (this only displays to users who have the right to edit).</div><h3>Template, site settings, and modules</h3><p>The look and feel of your site is controlled by a template. You can change the site name, background colour, highlights colour and more by editing the template settings. Click the "Template Settings" in the user menu.</p><p>The boxes around the main content of the site are called modules. You can modify modules on the current page by moving your cursor to the module and clicking the edit link. Always be sure to save and close any module you edit.</p><p>You can change some site settings such as the site name and description by clicking on the "Site Settings" link.</p><p>More advanced options for templates, site settings, modules, and more are available in the site administrator.</p><h3>Site and Administrator</h3><p>Your site actually has two separate sites. The site (also called the front end) is what visitors to your site will see. The administrator (also called the back end) is only used by people managing your site. You can access the administrator by clicking the "Site Administrator" link on the "User Menu" menu (visible once you login) or by adding /administrator to the end of your domain name. The same user name and password are used for both sites.</p><h3>Learn more</h3><p>There is much more to learn about how to use Joomla! to create the web site you envision. You can learn much more at the <a href="https://docs.joomla.org" target="_blank">Joomla! documentation site</a> and on the<a href="http://forum.joomla.org" target="_blank"> Joomla! forums</a>.</p>', '', 1, 2, '2013-11-16 00:00:00', 26, '', '0000-00-00 00:00:00', 0, 0, '0000-00-00 00:00:00', '2013-11-16 00:00:00', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":false,"urlatext":"","targeta":"","urlb":false,"urlbtext":"","targetb":"","urlc":false,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_tags":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 1, 0, '', '', 1, 2, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', '');
+(1, 61, 'Getting Started', 'getting-started', '<p>It''s easy to get started creating your website. Knowing some of the basics will help.</p><h3>What is a Content Management System?</h3><p>A content management system is software that allows you to create and manage webpages easily by separating the creation of your content from the mechanics required to present it on the web.</p><p>In this site, the content is stored in a <em>database</em>. The look and feel are created by a <em>template</em>. Joomla! brings together the template and your content to create web pages.</p><h3>Logging in</h3><p>To login to your site use the user name and password that were created as part of the installation process. Once logged-in you will be able to create and edit articles and modify some settings.</p><h3>Creating an article</h3><p>Once you are logged-in, a new menu will be visible. To create a new article, click on the "Submit Article" link on that menu.</p><p>The new article interface gives you a lot of options, but all you need to do is add a title and put something in the content area. To make it easy to find, set the state to published.</p><div>You can edit an existing article by clicking on the edit icon (this only displays to users who have the right to edit).</div><h3>Template, site settings, and modules</h3><p>The look and feel of your site is controlled by a template. You can change the site name, background colour, highlights colour and more by editing the template settings. Click the "Template Settings" in the user menu.</p><p>The boxes around the main content of the site are called modules. You can modify modules on the current page by moving your cursor to the module and clicking the edit link. Always be sure to save and close any module you edit.</p><p>You can change some site settings such as the site name and description by clicking on the "Site Settings" link.</p><p>More advanced options for templates, site settings, modules, and more are available in the site administrator.</p><h3>Site and Administrator</h3><p>Your site actually has two separate sites. The site (also called the front end) is what visitors to your site will see. The administrator (also called the back end) is only used by people managing your site. You can access the administrator by clicking the "Site Administrator" link on the "User Menu" menu (visible once you login) or by adding /administrator to the end of your domain name. The same user name and password are used for both sites.</p><h3>Learn more</h3><p>There is much more to learn about how to use Joomla! to create the web site you envision. You can learn much more at the <a href="https://docs.joomla.org" target="_blank">Joomla! documentation site</a> and on the<a href="http://forum.joomla.org" target="_blank"> Joomla! forums</a>.</p>', '', 1, 2, '2013-11-16 00:00:00', 26, '', '0000-00-00 00:00:00', 0, 0, '0000-00-00 00:00:00', '2013-11-16 00:00:00', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":false,"urlatext":"","targeta":"","urlb":false,"urlbtext":"","targetb":"","urlc":false,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_tags":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 1, 0, '', '', 1, 3, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ac_contentitem_tag_map`
+--
+
+CREATE TABLE `ac_contentitem_tag_map` (
+  `type_alias` varchar(255) NOT NULL DEFAULT '',
+  `core_content_id` int(10) unsigned NOT NULL COMMENT 'PK from the core content table',
+  `content_item_id` int(11) NOT NULL COMMENT 'PK from the content type table',
+  `tag_id` int(10) unsigned NOT NULL COMMENT 'PK from the tag table',
+  `tag_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Date of most recent save for this tag-item',
+  `type_id` mediumint(8) NOT NULL COMMENT 'PK from the content_type table'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Maps items from content tables to tags';
+
+--
+-- Dumping data for table `ac_contentitem_tag_map`
+--
+
+INSERT INTO `ac_contentitem_tag_map` (`type_alias`, `core_content_id`, `content_item_id`, `tag_id`, `tag_date`, `type_id`) VALUES
+('com_content.article', 1, 1, 2, '2013-11-16 06:00:00', 1);
 
 -- --------------------------------------------------------
 
@@ -401,28 +493,6 @@ INSERT INTO `ac_content_types` (`type_id`, `type_title`, `type_alias`, `table`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ac_contentitem_tag_map`
---
-
-CREATE TABLE `ac_contentitem_tag_map` (
-  `type_alias` varchar(255) NOT NULL DEFAULT '',
-  `core_content_id` int(10) unsigned NOT NULL COMMENT 'PK from the core content table',
-  `content_item_id` int(11) NOT NULL COMMENT 'PK from the content type table',
-  `tag_id` int(10) unsigned NOT NULL COMMENT 'PK from the tag table',
-  `tag_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Date of most recent save for this tag-item',
-  `type_id` mediumint(8) NOT NULL COMMENT 'PK from the content_type table'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Maps items from content tables to tags';
-
---
--- Dumping data for table `ac_contentitem_tag_map`
---
-
-INSERT INTO `ac_contentitem_tag_map` (`type_alias`, `core_content_id`, `content_item_id`, `tag_id`, `tag_date`, `type_id`) VALUES
-('com_content.article', 1, 1, 2, '2013-11-16 06:00:00', 1);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `ac_core_log_searches`
 --
 
@@ -455,7 +525,7 @@ CREATE TABLE `ac_extensions` (
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `ordering` int(11) DEFAULT '0',
   `state` int(11) DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=701 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=704 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ac_extensions`
@@ -494,7 +564,7 @@ INSERT INTO `ac_extensions` (`extension_id`, `name`, `type`, `element`, `folder`
 (32, 'com_postinstall', 'component', 'com_postinstall', '', 1, 1, 1, 1, '{"name":"com_postinstall","type":"component","creationDate":"September 2013","author":"Joomla! Project","copyright":"(C) 2005 - 2015 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.2.0","description":"COM_POSTINSTALL_XML_DESCRIPTION","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (101, 'SimplePie', 'library', 'simplepie', '', 0, 1, 1, 1, '{"name":"SimplePie","type":"library","creationDate":"2004","author":"SimplePie","copyright":"Copyright (c) 2004-2009, Ryan Parman and Geoffrey Sneddon","authorEmail":"","authorUrl":"http:\\/\\/simplepie.org\\/","version":"1.2","description":"LIB_SIMPLEPIE_XML_DESCRIPTION","group":"","filename":"simplepie"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (102, 'phputf8', 'library', 'phputf8', '', 0, 1, 1, 1, '{"name":"phputf8","type":"library","creationDate":"2006","author":"Harry Fuecks","copyright":"Copyright various authors","authorEmail":"hfuecks@gmail.com","authorUrl":"http:\\/\\/sourceforge.net\\/projects\\/phputf8","version":"0.5","description":"LIB_PHPUTF8_XML_DESCRIPTION","group":"","filename":"phputf8"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(103, 'Joomla! Platform', 'library', 'joomla', '', 0, 1, 1, 1, '{"name":"Joomla! Platform","type":"library","creationDate":"2008","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2015 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"http:\\/\\/www.joomla.org","version":"13.1","description":"LIB_JOOMLA_XML_DESCRIPTION","group":"","filename":"joomla"}', '{"mediaversion":"685f83e594d29271c4ac864530cd84bb"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(103, 'Joomla! Platform', 'library', 'joomla', '', 0, 1, 1, 1, '{"name":"Joomla! Platform","type":"library","creationDate":"2008","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2015 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"http:\\/\\/www.joomla.org","version":"13.1","description":"LIB_JOOMLA_XML_DESCRIPTION","group":"","filename":"joomla"}', '{"mediaversion":"10361df89d573151debf677d9148bbaa"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (104, 'IDNA Convert', 'library', 'idna_convert', '', 0, 1, 1, 1, '{"name":"IDNA Convert","type":"library","creationDate":"2004","author":"phlyLabs","copyright":"2004-2011 phlyLabs Berlin, http:\\/\\/phlylabs.de","authorEmail":"phlymail@phlylabs.de","authorUrl":"http:\\/\\/phlylabs.de","version":"0.8.0","description":"LIB_IDNA_XML_DESCRIPTION","group":"","filename":"idna_convert"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (105, 'FOF', 'library', 'fof', '', 0, 1, 1, 1, '{"name":"FOF","type":"library","creationDate":"2015-04-22 13:15:32","author":"Nicholas K. Dionysopoulos \\/ Akeeba Ltd","copyright":"(C)2011-2015 Nicholas K. Dionysopoulos","authorEmail":"nicholas@akeebabackup.com","authorUrl":"https:\\/\\/www.akeebabackup.com","version":"2.4.3","description":"LIB_FOF_XML_DESCRIPTION","group":"","filename":"fof"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (106, 'PHPass', 'library', 'phpass', '', 0, 1, 1, 1, '{"name":"PHPass","type":"library","creationDate":"2004-2006","author":"Solar Designer","copyright":"","authorEmail":"solar@openwall.com","authorUrl":"http:\\/\\/www.openwall.com\\/phpass\\/","version":"0.3","description":"LIB_PHPASS_XML_DESCRIPTION","group":"","filename":"phpass"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
@@ -594,7 +664,10 @@ INSERT INTO `ac_extensions` (`extension_id`, `name`, `type`, `element`, `folder`
 (507, 'isis', 'template', 'isis', '', 1, 1, 1, 0, '{"name":"isis","type":"template","creationDate":"3\\/30\\/2012","author":"Kyle Ledbetter","copyright":"Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"","version":"1.0","description":"TPL_ISIS_XML_DESCRIPTION","group":"","filename":"templateDetails"}', '{"templateColor":"","logoFile":""}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (600, 'English (en-GB)', 'language', 'en-GB', '', 0, 1, 1, 1, '{"name":"English (en-GB)","type":"language","creationDate":"2013-03-07","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2015 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.4.2","description":"en-GB site language","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (601, 'English (en-GB)', 'language', 'en-GB', '', 1, 1, 1, 1, '{"name":"English (en-GB)","type":"language","creationDate":"2013-03-07","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2015 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.4.2","description":"en-GB administrator language","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(700, 'files_joomla', 'file', 'joomla', '', 0, 1, 1, 1, '{"name":"files_joomla","type":"file","creationDate":"June 2015","author":"Joomla! Project","copyright":"(C) 2005 - 2015 Open Source Matters. All rights reserved","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.4.3","description":"FILES_JOOMLA_XML_DESCRIPTION","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0);
+(700, 'files_joomla', 'file', 'joomla', '', 0, 1, 1, 1, '{"name":"files_joomla","type":"file","creationDate":"June 2015","author":"Joomla! Project","copyright":"(C) 2005 - 2015 Open Source Matters. All rights reserved","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.4.3","description":"FILES_JOOMLA_XML_DESCRIPTION","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(701, 'Akeeba', 'component', 'com_akeeba', '', 1, 1, 0, 0, '{"name":"Akeeba","type":"component","creationDate":"2015-06-23","author":"Nicholas K. Dionysopoulos","copyright":"Copyright (c)2006-2014 Nicholas K. Dionysopoulos","authorEmail":"nicholas@dionysopoulos.me","authorUrl":"http:\\/\\/www.akeebabackup.com","version":"4.2.4","description":"Akeeba Backup Core - Full Joomla! site backup solution, Core Edition.","group":"","filename":"akeeba"}', '{"siteurl":"http:\\/\\/localhost:8888\\/AguilusConsulting\\/","jlibrariesdir":"\\/Applications\\/MAMP\\/htdocs\\/AguilusConsulting\\/libraries","jversion":"1.6"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(702, 'F0F (NEW) DO NOT REMOVE', 'library', 'lib_f0f', '', 0, 1, 1, 0, '{"name":"F0F (NEW) DO NOT REMOVE","type":"library","creationDate":"2015-05-26 13:37:16","author":"Nicholas K. Dionysopoulos \\/ Akeeba Ltd","copyright":"(C)2011-2014 Nicholas K. Dionysopoulos","authorEmail":"nicholas@akeebabackup.com","authorUrl":"https:\\/\\/www.akeebabackup.com","version":"revB8F517E-1432636636","description":"Framework-on-Framework (FOF) newer version - DO NOT REMOVE - The rapid component development framework for Joomla!. This package is the newer version of FOF, not the one shipped with Joomla! as the official Joomla! RAD Layer. The Joomla! RAD Layer has ceased development in March 2014. DO NOT UNINSTALL THIS PACKAGE, IT IS *** N O T *** A DUPLICATE OF THE ''FOF'' PACKAGE. REMOVING EITHER FOF PACKAGE WILL BREAK YOUR SITE.","group":"","filename":"lib_f0f"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(703, 'AkeebaStrapper', 'file', 'AkeebaStrapper', '', 0, 1, 0, 0, '{"name":"AkeebaStrapper","type":"file","creationDate":"2015-05-26 13:37:16","author":"Nicholas K. Dionysopoulos","copyright":"(C) 2012-2013 Akeeba Ltd.","authorEmail":"nicholas@dionysopoulos.me","authorUrl":"https:\\/\\/www.akeebabackup.com","version":"revB8F517E-1432636636","description":"Namespaced jQuery, jQuery UI and Bootstrap for Akeeba products.","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1130,7 +1203,7 @@ CREATE TABLE `ac_menu` (
   `home` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'Indicates if this menu item is the home or default page.',
   `language` char(7) NOT NULL DEFAULT '',
   `client_id` tinyint(4) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=108 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ac_menu`
@@ -1143,27 +1216,28 @@ INSERT INTO `ac_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `link
 (4, 'menu', 'com_banners_categories', 'Categories', '', 'Banners/Categories', 'index.php?option=com_categories&extension=com_banners', 'component', 0, 2, 2, 6, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners-cat', 0, '', 4, 5, 0, '*', 1),
 (5, 'menu', 'com_banners_clients', 'Clients', '', 'Banners/Clients', 'index.php?option=com_banners&view=clients', 'component', 0, 2, 2, 4, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners-clients', 0, '', 6, 7, 0, '*', 1),
 (6, 'menu', 'com_banners_tracks', 'Tracks', '', 'Banners/Tracks', 'index.php?option=com_banners&view=tracks', 'component', 0, 2, 2, 4, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners-tracks', 0, '', 8, 9, 0, '*', 1),
-(7, 'menu', 'com_contact', 'Contacts', '', 'Contacts', 'index.php?option=com_contact', 'component', 0, 1, 1, 8, 0, '0000-00-00 00:00:00', 0, 0, 'class:contact', 0, '', 23, 28, 0, '*', 1),
-(8, 'menu', 'com_contact', 'Contacts', '', 'Contacts/Contacts', 'index.php?option=com_contact', 'component', 0, 7, 2, 8, 0, '0000-00-00 00:00:00', 0, 0, 'class:contact', 0, '', 24, 25, 0, '*', 1),
-(9, 'menu', 'com_contact_categories', 'Categories', '', 'Contacts/Categories', 'index.php?option=com_categories&extension=com_contact', 'component', 0, 7, 2, 6, 0, '0000-00-00 00:00:00', 0, 0, 'class:contact-cat', 0, '', 26, 27, 0, '*', 1),
-(10, 'menu', 'com_messages', 'Messaging', '', 'Messaging', 'index.php?option=com_messages', 'component', 0, 1, 1, 15, 0, '0000-00-00 00:00:00', 0, 0, 'class:messages', 0, '', 29, 34, 0, '*', 1),
-(11, 'menu', 'com_messages_add', 'New Private Message', '', 'Messaging/New Private Message', 'index.php?option=com_messages&task=message.add', 'component', 0, 10, 2, 15, 0, '0000-00-00 00:00:00', 0, 0, 'class:messages-add', 0, '', 30, 31, 0, '*', 1),
-(12, 'menu', 'com_messages_read', 'Read Private Message', '', 'Messaging/Read Private Message', 'index.php?option=com_messages', 'component', 0, 10, 2, 15, 0, '0000-00-00 00:00:00', 0, 0, 'class:messages-read', 0, '', 32, 33, 0, '*', 1),
-(13, 'menu', 'com_newsfeeds', 'News Feeds', '', 'News Feeds', 'index.php?option=com_newsfeeds', 'component', 0, 1, 1, 17, 0, '0000-00-00 00:00:00', 0, 0, 'class:newsfeeds', 0, '', 35, 40, 0, '*', 1),
-(14, 'menu', 'com_newsfeeds_feeds', 'Feeds', '', 'News Feeds/Feeds', 'index.php?option=com_newsfeeds', 'component', 0, 13, 2, 17, 0, '0000-00-00 00:00:00', 0, 0, 'class:newsfeeds', 0, '', 36, 37, 0, '*', 1),
-(15, 'menu', 'com_newsfeeds_categories', 'Categories', '', 'News Feeds/Categories', 'index.php?option=com_categories&extension=com_newsfeeds', 'component', 0, 13, 2, 6, 0, '0000-00-00 00:00:00', 0, 0, 'class:newsfeeds-cat', 0, '', 38, 39, 0, '*', 1),
-(16, 'menu', 'com_redirect', 'Redirect', '', 'Redirect', 'index.php?option=com_redirect', 'component', 0, 1, 1, 24, 0, '0000-00-00 00:00:00', 0, 0, 'class:redirect', 0, '', 41, 42, 0, '*', 1),
-(17, 'menu', 'com_search', 'Basic Search', '', 'Basic Search', 'index.php?option=com_search', 'component', 0, 1, 1, 19, 0, '0000-00-00 00:00:00', 0, 0, 'class:search', 0, '', 43, 44, 0, '*', 1),
-(18, 'menu', 'com_finder', 'Smart Search', '', 'Smart Search', 'index.php?option=com_finder', 'component', 0, 1, 1, 27, 0, '0000-00-00 00:00:00', 0, 0, 'class:finder', 0, '', 45, 46, 0, '*', 1),
-(19, 'menu', 'com_joomlaupdate', 'Joomla! Update', '', 'Joomla! Update', 'index.php?option=com_joomlaupdate', 'component', 1, 1, 1, 28, 0, '0000-00-00 00:00:00', 0, 0, 'class:joomlaupdate', 0, '', 47, 48, 0, '*', 1),
-(20, 'main', 'com_tags', 'Tags', '', 'Tags', 'index.php?option=com_tags', 'component', 0, 1, 1, 29, 0, '0000-00-00 00:00:00', 0, 1, 'class:tags', 0, '', 49, 50, 0, '', 1),
-(21, 'main', 'com_postinstall', 'Post-installation messages', '', 'Post-installation messages', 'index.php?option=com_postinstall', 'component', 0, 1, 1, 32, 0, '0000-00-00 00:00:00', 0, 1, 'class:postinstall', 0, '', 51, 52, 0, '*', 1),
-(101, 'mainmenu', 'Home', 'homepage', '', 'homepage', 'index.php?option=com_content&view=article&id=1', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"show_title":"1","link_titles":"","show_intro":"","info_block_position":"0","show_category":"0","link_category":"0","show_parent_category":"0","link_parent_category":"0","show_author":"0","link_author":"0","show_create_date":"0","show_modify_date":"0","show_publish_date":"0","show_item_navigation":"0","show_vote":"","show_tags":"","show_icons":"0","show_print_icon":"0","show_email_icon":"0","show_hits":"0","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 53, 54, 1, '*', 0),
+(7, 'menu', 'com_contact', 'Contacts', '', 'Contacts', 'index.php?option=com_contact', 'component', 0, 1, 1, 8, 0, '0000-00-00 00:00:00', 0, 0, 'class:contact', 0, '', 21, 26, 0, '*', 1),
+(8, 'menu', 'com_contact', 'Contacts', '', 'Contacts/Contacts', 'index.php?option=com_contact', 'component', 0, 7, 2, 8, 0, '0000-00-00 00:00:00', 0, 0, 'class:contact', 0, '', 22, 23, 0, '*', 1),
+(9, 'menu', 'com_contact_categories', 'Categories', '', 'Contacts/Categories', 'index.php?option=com_categories&extension=com_contact', 'component', 0, 7, 2, 6, 0, '0000-00-00 00:00:00', 0, 0, 'class:contact-cat', 0, '', 24, 25, 0, '*', 1),
+(10, 'menu', 'com_messages', 'Messaging', '', 'Messaging', 'index.php?option=com_messages', 'component', 0, 1, 1, 15, 0, '0000-00-00 00:00:00', 0, 0, 'class:messages', 0, '', 27, 32, 0, '*', 1),
+(11, 'menu', 'com_messages_add', 'New Private Message', '', 'Messaging/New Private Message', 'index.php?option=com_messages&task=message.add', 'component', 0, 10, 2, 15, 0, '0000-00-00 00:00:00', 0, 0, 'class:messages-add', 0, '', 28, 29, 0, '*', 1),
+(12, 'menu', 'com_messages_read', 'Read Private Message', '', 'Messaging/Read Private Message', 'index.php?option=com_messages', 'component', 0, 10, 2, 15, 0, '0000-00-00 00:00:00', 0, 0, 'class:messages-read', 0, '', 30, 31, 0, '*', 1),
+(13, 'menu', 'com_newsfeeds', 'News Feeds', '', 'News Feeds', 'index.php?option=com_newsfeeds', 'component', 0, 1, 1, 17, 0, '0000-00-00 00:00:00', 0, 0, 'class:newsfeeds', 0, '', 33, 38, 0, '*', 1),
+(14, 'menu', 'com_newsfeeds_feeds', 'Feeds', '', 'News Feeds/Feeds', 'index.php?option=com_newsfeeds', 'component', 0, 13, 2, 17, 0, '0000-00-00 00:00:00', 0, 0, 'class:newsfeeds', 0, '', 34, 35, 0, '*', 1),
+(15, 'menu', 'com_newsfeeds_categories', 'Categories', '', 'News Feeds/Categories', 'index.php?option=com_categories&extension=com_newsfeeds', 'component', 0, 13, 2, 6, 0, '0000-00-00 00:00:00', 0, 0, 'class:newsfeeds-cat', 0, '', 36, 37, 0, '*', 1),
+(16, 'menu', 'com_redirect', 'Redirect', '', 'Redirect', 'index.php?option=com_redirect', 'component', 0, 1, 1, 24, 0, '0000-00-00 00:00:00', 0, 0, 'class:redirect', 0, '', 39, 40, 0, '*', 1),
+(17, 'menu', 'com_search', 'Basic Search', '', 'Basic Search', 'index.php?option=com_search', 'component', 0, 1, 1, 19, 0, '0000-00-00 00:00:00', 0, 0, 'class:search', 0, '', 41, 42, 0, '*', 1),
+(18, 'menu', 'com_finder', 'Smart Search', '', 'Smart Search', 'index.php?option=com_finder', 'component', 0, 1, 1, 27, 0, '0000-00-00 00:00:00', 0, 0, 'class:finder', 0, '', 43, 44, 0, '*', 1),
+(19, 'menu', 'com_joomlaupdate', 'Joomla! Update', '', 'Joomla! Update', 'index.php?option=com_joomlaupdate', 'component', 1, 1, 1, 28, 0, '0000-00-00 00:00:00', 0, 0, 'class:joomlaupdate', 0, '', 45, 46, 0, '*', 1),
+(20, 'main', 'com_tags', 'Tags', '', 'Tags', 'index.php?option=com_tags', 'component', 0, 1, 1, 29, 0, '0000-00-00 00:00:00', 0, 1, 'class:tags', 0, '', 47, 48, 0, '', 1),
+(21, 'main', 'com_postinstall', 'Post-installation messages', '', 'Post-installation messages', 'index.php?option=com_postinstall', 'component', 0, 1, 1, 32, 0, '0000-00-00 00:00:00', 0, 1, 'class:postinstall', 0, '', 49, 50, 0, '*', 1),
+(101, 'mainmenu', 'Home', 'homepage', '', 'homepage', 'index.php?option=com_content&view=article&id=1', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"show_title":"1","link_titles":"","show_intro":"","info_block_position":"0","show_category":"0","link_category":"0","show_parent_category":"0","link_parent_category":"0","show_author":"0","link_author":"0","show_create_date":"0","show_modify_date":"0","show_publish_date":"0","show_item_navigation":"0","show_vote":"","show_tags":"","show_icons":"0","show_print_icon":"0","show_email_icon":"0","show_hits":"0","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 51, 52, 1, '*', 0),
 (102, 'usermenu', 'Your Profile', 'your-profile', '', 'your-profile', 'index.php?option=com_users&view=profile&layout=edit', 'component', 1, 1, 1, 25, 0, '0000-00-00 00:00:00', 0, 2, '', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 11, 12, 0, '*', 0),
-(103, 'usermenu', 'Site Administrator', '2013-11-16-23-26-41', '', '2013-11-16-23-26-41', 'administrator', 'url', 1, 1, 1, 0, 0, '0000-00-00 00:00:00', 0, 6, '', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1}', 17, 18, 0, '*', 0),
+(103, 'usermenu', 'Site Administrator', '2013-11-16-23-26-41', '', '2013-11-16-23-26-41', 'administrator', 'url', 1, 1, 1, 0, 0, '0000-00-00 00:00:00', 0, 6, '', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1}', 15, 16, 0, '*', 0),
 (104, 'usermenu', 'Submit an Article', 'submit-an-article', '', 'submit-an-article', 'index.php?option=com_content&view=form&layout=edit', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 3, '', 0, '{"enable_category":"0","catid":"2","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 13, 14, 0, '*', 0),
-(106, 'usermenu', 'Template Settings', 'template-settings', '', 'template-settings', 'index.php?option=com_config&view=templates&controller=config.display.templates', 'component', 1, 1, 1, 23, 0, '0000-00-00 00:00:00', 0, 6, '', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 19, 20, 0, '*', 0),
-(107, 'usermenu', 'Site Settings', 'site-settings', '', 'site-settings', 'index.php?option=com_config&view=config&controller=config.display.config', 'component', 1, 1, 1, 23, 0, '0000-00-00 00:00:00', 0, 6, '', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 21, 22, 0, '*', 0);
+(106, 'usermenu', 'Template Settings', 'template-settings', '', 'template-settings', 'index.php?option=com_config&view=templates&controller=config.display.templates', 'component', 1, 1, 1, 23, 0, '0000-00-00 00:00:00', 0, 6, '', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 17, 18, 0, '*', 0),
+(107, 'usermenu', 'Site Settings', 'site-settings', '', 'site-settings', 'index.php?option=com_config&view=config&controller=config.display.config', 'component', 1, 1, 1, 23, 0, '0000-00-00 00:00:00', 0, 6, '', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 19, 20, 0, '*', 0),
+(109, 'main', 'COM_AKEEBA', 'com-akeeba', '', 'com-akeeba', 'index.php?option=com_akeeba', 'component', 1, 1, 1, 701, 0, '0000-00-00 00:00:00', 0, 1, '../media/com_akeeba/icons/akeeba-16.png', 0, '', 53, 54, 0, '', 1);
 
 -- --------------------------------------------------------
 
@@ -1385,7 +1459,7 @@ CREATE TABLE `ac_postinstall_messages` (
   `condition_method` varchar(255) DEFAULT NULL COMMENT 'Display condition method, must return boolean',
   `version_introduced` varchar(50) NOT NULL DEFAULT '3.2.0' COMMENT 'Version when this message was introduced',
   `enabled` tinyint(3) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ac_postinstall_messages`
@@ -1393,7 +1467,11 @@ CREATE TABLE `ac_postinstall_messages` (
 
 INSERT INTO `ac_postinstall_messages` (`postinstall_message_id`, `extension_id`, `title_key`, `description_key`, `action_key`, `language_extension`, `language_client_id`, `type`, `action_file`, `action`, `condition_file`, `condition_method`, `version_introduced`, `enabled`) VALUES
 (1, 700, 'PLG_TWOFACTORAUTH_TOTP_POSTINSTALL_TITLE', 'PLG_TWOFACTORAUTH_TOTP_POSTINSTALL_BODY', 'PLG_TWOFACTORAUTH_TOTP_POSTINSTALL_ACTION', 'plg_twofactorauth_totp', 1, 'action', 'site://plugins/twofactorauth/totp/postinstall/actions.php', 'twofactorauth_postinstall_action', 'site://plugins/twofactorauth/totp/postinstall/actions.php', 'twofactorauth_postinstall_condition', '3.2.0', 1),
-(2, 700, 'COM_CPANEL_WELCOME_BEGINNERS_TITLE', 'COM_CPANEL_WELCOME_BEGINNERS_MESSAGE', '', 'com_cpanel', 1, 'message', '', '', '', '', '3.2.0', 1);
+(2, 700, 'COM_CPANEL_WELCOME_BEGINNERS_TITLE', 'COM_CPANEL_WELCOME_BEGINNERS_MESSAGE', '', 'com_cpanel', 1, 'message', '', '', '', '', '3.2.0', 1),
+(3, 701, 'AKEEBA_POSTSETUP_LBL_CONFWIZ', 'AKEEBA_POSTSETUP_DESC_CONFWIZ', 'AKEEBA_POSTSETUP_BTN_RUN_CONFWIZ', 'com_akeeba', 1, 'action', 'admin://components/com_akeeba/helpers/postinstall.php', 'com_akeeba_postinstall_confwiz_action', 'admin://components/com_akeeba/helpers/postinstall.php', 'com_akeeba_postinstall_confwiz_condition', '4.0.0', 1),
+(4, 701, 'AKEEBA_POSTSETUP_LBL_ACCEPTLICENSE', 'AKEEBA_POSTSETUP_DESC_ACCEPTLICENSE', 'AKEEBA_POSTSETUP_BTN_I_CONFIRM_THIS', 'com_akeeba', 1, 'message', '', '', '', '', '4.0.0', 1),
+(5, 701, 'AKEEBA_POSTSETUP_LBL_ACCEPTSUPPORT', 'AKEEBA_POSTSETUP_DESC_ACCEPTSUPPORT', 'AKEEBA_POSTSETUP_BTN_I_CONFIRM_THIS', 'com_akeeba', 1, 'message', '', '', '', '', '4.0.0', 1),
+(6, 701, 'AKEEBA_POSTSETUP_LBL_ACCEPTBACKUPTEST', 'AKEEBA_POSTSETUP_DESC_ACCEPTBACKUPTEST', 'AKEEBA_POSTSETUP_BTN_I_CONFIRM_THIS', 'com_akeeba', 1, 'message', '', '', '', '', '4.0.0', 1);
 
 -- --------------------------------------------------------
 
@@ -1453,8 +1531,7 @@ CREATE TABLE `ac_session` (
 --
 
 INSERT INTO `ac_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
-('4ca71700391de35e5e80c974d15c57d9', 1, 0, '1436244702', '__default|a:8:{s:15:"session.counter";i:18;s:19:"session.timer.start";i:1436244441;s:18:"session.timer.last";i:1436244701;s:17:"session.timer.now";i:1436244701;s:22:"session.client.browser";s:121:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36";s:8:"registry";O:24:"Joomla\\Registry\\Registry":2:{s:7:"\\0\\0\\0data";O:8:"stdClass":4:{s:11:"application";O:8:"stdClass":1:{s:4:"lang";s:5:"en-GB";}s:13:"com_installer";O:8:"stdClass":2:{s:7:"message";s:0:"";s:17:"extension_message";s:0:"";}s:15:"com_postinstall";O:8:"stdClass":1:{s:8:"messages";O:8:"stdClass":1:{s:3:"eid";s:3:"700";}}s:14:"com_categories";O:8:"stdClass":2:{s:4:"edit";O:8:"stdClass":1:{s:8:"category";O:8:"stdClass":2:{s:4:"data";N;s:2:"id";a:0:{}}}s:10:"categories";O:8:"stdClass":1:{s:6:"filter";O:8:"stdClass":1:{s:9:"extension";s:11:"com_content";}}}}s:9:"separator";s:1:".";}s:4:"user";O:5:"JUser":28:{s:9:"\\0\\0\\0isRoot";b:1;s:2:"id";s:2:"26";s:4:"name";s:10:"Super User";s:8:"username";s:5:"admin";s:5:"email";s:27:"admin@aguilusconsulting.com";s:8:"password";s:60:"$2y$10$Bcc5SNuucO49Wb4OCLNdAOF334aqlZdtteJ1uot7iKQTIrdIoK0oi";s:14:"password_clear";s:0:"";s:5:"block";s:1:"0";s:9:"sendEmail";s:1:"1";s:12:"registerDate";s:19:"2015-07-07 04:47:08";s:13:"lastvisitDate";s:19:"0000-00-00 00:00:00";s:10:"activation";s:1:"0";s:6:"params";s:0:"";s:6:"groups";a:1:{i:8;s:1:"8";}s:5:"guest";i:0;s:13:"lastResetTime";s:19:"0000-00-00 00:00:00";s:10:"resetCount";s:1:"0";s:12:"requireReset";s:1:"0";s:10:"\\0\\0\\0_params";O:24:"Joomla\\Registry\\Registry":2:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}s:9:"separator";s:1:".";}s:14:"\\0\\0\\0_authGroups";a:2:{i:0;i:1;i:1;i:8;}s:14:"\\0\\0\\0_authLevels";a:5:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;i:4;i:6;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:13:"\\0\\0\\0userHelper";O:18:"JUserWrapperHelper":0:{}s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;s:6:"otpKey";s:0:"";s:4:"otep";s:0:"";}s:13:"session.token";s:32:"7052145157d968daa43309bc848f6921";}', 26, 'admin'),
-('735c6860dcac4b33500a58c0c26b3c2f', 0, 1, '1436245285', '__default|a:8:{s:15:"session.counter";i:2;s:19:"session.timer.start";i:1436244440;s:18:"session.timer.last";i:1436244440;s:17:"session.timer.now";i:1436245285;s:22:"session.client.browser";s:121:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36";s:8:"registry";O:24:"Joomla\\Registry\\Registry":2:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}s:9:"separator";s:1:".";}s:4:"user";O:5:"JUser":26:{s:9:"\\0\\0\\0isRoot";b:0;s:2:"id";i:0;s:4:"name";N;s:8:"username";N;s:5:"email";N;s:8:"password";N;s:14:"password_clear";s:0:"";s:5:"block";N;s:9:"sendEmail";i:0;s:12:"registerDate";N;s:13:"lastvisitDate";N;s:10:"activation";N;s:6:"params";N;s:6:"groups";a:1:{i:0;s:1:"9";}s:5:"guest";i:1;s:13:"lastResetTime";N;s:10:"resetCount";N;s:12:"requireReset";N;s:10:"\\0\\0\\0_params";O:24:"Joomla\\Registry\\Registry":2:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}s:9:"separator";s:1:".";}s:14:"\\0\\0\\0_authGroups";a:2:{i:0;i:1;i:1;i:9;}s:14:"\\0\\0\\0_authLevels";a:3:{i:0;i:1;i:1;i:1;i:2;i:5;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:13:"\\0\\0\\0userHelper";O:18:"JUserWrapperHelper":0:{}s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;}s:13:"session.token";s:32:"a2948e9300d478335412820b21cbcc7a";}', 0, '');
+('4ca71700391de35e5e80c974d15c57d9', 1, 0, '1437346259', '__default|a:8:{s:15:"session.counter";i:11;s:19:"session.timer.start";i:1437346118;s:18:"session.timer.last";i:1437346255;s:17:"session.timer.now";i:1437346259;s:22:"session.client.browser";s:121:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36";s:8:"registry";O:24:"Joomla\\Registry\\Registry":2:{s:7:"\\0\\0\\0data";O:8:"stdClass":2:{s:11:"application";O:8:"stdClass":1:{s:4:"lang";s:5:"en-GB";}s:13:"com_installer";O:8:"stdClass":3:{s:7:"message";s:0:"";s:17:"extension_message";s:0:"";s:12:"redirect_url";N;}}s:9:"separator";s:1:".";}s:4:"user";O:5:"JUser":28:{s:9:"\\0\\0\\0isRoot";b:1;s:2:"id";s:2:"26";s:4:"name";s:10:"Super User";s:8:"username";s:5:"admin";s:5:"email";s:27:"admin@aguilusconsulting.com";s:8:"password";s:60:"$2y$10$Bcc5SNuucO49Wb4OCLNdAOF334aqlZdtteJ1uot7iKQTIrdIoK0oi";s:14:"password_clear";s:0:"";s:5:"block";s:1:"0";s:9:"sendEmail";s:1:"1";s:12:"registerDate";s:19:"2015-07-07 04:47:08";s:13:"lastvisitDate";s:19:"2015-07-07 04:48:05";s:10:"activation";s:1:"0";s:6:"params";s:0:"";s:6:"groups";a:1:{i:8;s:1:"8";}s:5:"guest";i:0;s:13:"lastResetTime";s:19:"0000-00-00 00:00:00";s:10:"resetCount";s:1:"0";s:12:"requireReset";s:1:"0";s:10:"\\0\\0\\0_params";O:24:"Joomla\\Registry\\Registry":2:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}s:9:"separator";s:1:".";}s:14:"\\0\\0\\0_authGroups";a:2:{i:0;i:1;i:1;i:8;}s:14:"\\0\\0\\0_authLevels";a:5:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;i:4;i:6;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:13:"\\0\\0\\0userHelper";O:18:"JUserWrapperHelper":0:{}s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;s:6:"otpKey";s:0:"";s:4:"otep";s:0:"";}s:13:"session.token";s:32:"5cbf302075237f954381bccf39a2d949";}__akeeba|a:1:{s:7:"profile";i:1;}', 26, 'admin');
 
 -- --------------------------------------------------------
 
@@ -1628,6 +1705,29 @@ INSERT INTO `ac_ucm_history` (`version_id`, `ucm_item_id`, `ucm_type_id`, `versi
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `ac_updates`
+--
+
+CREATE TABLE `ac_updates` (
+  `update_id` int(11) NOT NULL,
+  `update_site_id` int(11) DEFAULT '0',
+  `extension_id` int(11) DEFAULT '0',
+  `name` varchar(100) DEFAULT '',
+  `description` text NOT NULL,
+  `element` varchar(100) DEFAULT '',
+  `type` varchar(20) DEFAULT '',
+  `folder` varchar(20) DEFAULT '',
+  `client_id` tinyint(3) DEFAULT '0',
+  `version` varchar(32) DEFAULT '',
+  `data` text NOT NULL,
+  `detailsurl` text NOT NULL,
+  `infourl` text NOT NULL,
+  `extra_query` varchar(1000) DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Available Updates';
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `ac_update_sites`
 --
 
@@ -1639,17 +1739,18 @@ CREATE TABLE `ac_update_sites` (
   `enabled` int(11) DEFAULT '0',
   `last_check_timestamp` bigint(20) DEFAULT '0',
   `extra_query` varchar(1000) DEFAULT ''
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='Update Sites';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='Update Sites';
 
 --
 -- Dumping data for table `ac_update_sites`
 --
 
 INSERT INTO `ac_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`, `extra_query`) VALUES
-(1, 'Joomla! Core', 'collection', 'http://update.joomla.org/core/list.xml', 1, 1436244488, ''),
-(2, 'Joomla! Extension Directory', 'collection', 'http://update.joomla.org/jed/list.xml', 1, 1436244488, ''),
+(1, 'Joomla! Core', 'collection', 'http://update.joomla.org/core/list.xml', 1, 1437346127, ''),
+(2, 'Joomla! Extension Directory', 'collection', 'http://update.joomla.org/jed/list.xml', 1, 1437346127, ''),
 (3, 'Accredited Joomla! Translations', 'collection', 'http://update.joomla.org/language/translationlist_3.xml', 1, 0, ''),
-(4, 'Joomla! Update Component Update Site', 'extension', 'http://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 0, '');
+(4, 'Joomla! Update Component Update Site', 'extension', 'http://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 0, ''),
+(5, 'Akeeba Backup Core', 'extension', 'http://cdn.akeebabackup.com/updates/abcore.xml', 1, 1437346259, '');
 
 -- --------------------------------------------------------
 
@@ -1670,30 +1771,69 @@ INSERT INTO `ac_update_sites_extensions` (`update_site_id`, `extension_id`) VALU
 (1, 700),
 (2, 700),
 (3, 600),
-(4, 28);
+(4, 28),
+(5, 701);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ac_updates`
+-- Table structure for table `ac_usergroups`
 --
 
-CREATE TABLE `ac_updates` (
-  `update_id` int(11) NOT NULL,
-  `update_site_id` int(11) DEFAULT '0',
-  `extension_id` int(11) DEFAULT '0',
-  `name` varchar(100) DEFAULT '',
-  `description` text NOT NULL,
-  `element` varchar(100) DEFAULT '',
-  `type` varchar(20) DEFAULT '',
-  `folder` varchar(20) DEFAULT '',
-  `client_id` tinyint(3) DEFAULT '0',
-  `version` varchar(32) DEFAULT '',
-  `data` text NOT NULL,
-  `detailsurl` text NOT NULL,
-  `infourl` text NOT NULL,
-  `extra_query` varchar(1000) DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Available Updates';
+CREATE TABLE `ac_usergroups` (
+  `id` int(10) unsigned NOT NULL COMMENT 'Primary Key',
+  `parent_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Adjacency List Reference Id',
+  `lft` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set lft.',
+  `rgt` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set rgt.',
+  `title` varchar(100) NOT NULL DEFAULT ''
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `ac_usergroups`
+--
+
+INSERT INTO `ac_usergroups` (`id`, `parent_id`, `lft`, `rgt`, `title`) VALUES
+(1, 0, 1, 18, 'Public'),
+(2, 1, 8, 15, 'Registered'),
+(3, 2, 9, 14, 'Author'),
+(4, 3, 10, 13, 'Editor'),
+(5, 4, 11, 12, 'Publisher'),
+(6, 1, 4, 7, 'Manager'),
+(7, 6, 5, 6, 'Administrator'),
+(8, 1, 16, 17, 'Super Users'),
+(9, 1, 2, 3, 'Guest');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ac_users`
+--
+
+CREATE TABLE `ac_users` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL DEFAULT '',
+  `username` varchar(150) NOT NULL DEFAULT '',
+  `email` varchar(100) NOT NULL DEFAULT '',
+  `password` varchar(100) NOT NULL DEFAULT '',
+  `block` tinyint(4) NOT NULL DEFAULT '0',
+  `sendEmail` tinyint(4) DEFAULT '0',
+  `registerDate` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `lastvisitDate` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `activation` varchar(100) NOT NULL DEFAULT '',
+  `params` text NOT NULL,
+  `lastResetTime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Date of last password reset',
+  `resetCount` int(11) NOT NULL DEFAULT '0' COMMENT 'Count of password resets since lastResetTime',
+  `otpKey` varchar(1000) NOT NULL DEFAULT '' COMMENT 'Two factor authentication encrypted keys',
+  `otep` varchar(1000) NOT NULL DEFAULT '' COMMENT 'One time emergency passwords',
+  `requireReset` tinyint(4) NOT NULL DEFAULT '0' COMMENT 'Require user to reset password on next login'
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `ac_users`
+--
+
+INSERT INTO `ac_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`) VALUES
+(26, 'Super User', 'admin', 'admin@aguilusconsulting.com', '$2y$10$Bcc5SNuucO49Wb4OCLNdAOF334aqlZdtteJ1uot7iKQTIrdIoK0oi', 0, 1, '2015-07-07 04:47:08', '2015-07-19 22:48:44', '0', '', '0000-00-00 00:00:00', 0, '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -1769,67 +1909,6 @@ INSERT INTO `ac_user_usergroup_map` (`user_id`, `group_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ac_usergroups`
---
-
-CREATE TABLE `ac_usergroups` (
-  `id` int(10) unsigned NOT NULL COMMENT 'Primary Key',
-  `parent_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Adjacency List Reference Id',
-  `lft` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set lft.',
-  `rgt` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set rgt.',
-  `title` varchar(100) NOT NULL DEFAULT ''
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `ac_usergroups`
---
-
-INSERT INTO `ac_usergroups` (`id`, `parent_id`, `lft`, `rgt`, `title`) VALUES
-(1, 0, 1, 18, 'Public'),
-(2, 1, 8, 15, 'Registered'),
-(3, 2, 9, 14, 'Author'),
-(4, 3, 10, 13, 'Editor'),
-(5, 4, 11, 12, 'Publisher'),
-(6, 1, 4, 7, 'Manager'),
-(7, 6, 5, 6, 'Administrator'),
-(8, 1, 16, 17, 'Super Users'),
-(9, 1, 2, 3, 'Guest');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `ac_users`
---
-
-CREATE TABLE `ac_users` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL DEFAULT '',
-  `username` varchar(150) NOT NULL DEFAULT '',
-  `email` varchar(100) NOT NULL DEFAULT '',
-  `password` varchar(100) NOT NULL DEFAULT '',
-  `block` tinyint(4) NOT NULL DEFAULT '0',
-  `sendEmail` tinyint(4) DEFAULT '0',
-  `registerDate` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `lastvisitDate` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `activation` varchar(100) NOT NULL DEFAULT '',
-  `params` text NOT NULL,
-  `lastResetTime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Date of last password reset',
-  `resetCount` int(11) NOT NULL DEFAULT '0' COMMENT 'Count of password resets since lastResetTime',
-  `otpKey` varchar(1000) NOT NULL DEFAULT '' COMMENT 'Two factor authentication encrypted keys',
-  `otep` varchar(1000) NOT NULL DEFAULT '' COMMENT 'One time emergency passwords',
-  `requireReset` tinyint(4) NOT NULL DEFAULT '0' COMMENT 'Require user to reset password on next login'
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `ac_users`
---
-
-INSERT INTO `ac_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`) VALUES
-(26, 'Super User', 'admin', 'admin@aguilusconsulting.com', '$2y$10$Bcc5SNuucO49Wb4OCLNdAOF334aqlZdtteJ1uot7iKQTIrdIoK0oi', 0, 1, '2015-07-07 04:47:08', '2015-07-07 04:48:05', '0', '', '0000-00-00 00:00:00', 0, '', '', 0);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `ac_viewlevels`
 --
 
@@ -1856,6 +1935,32 @@ INSERT INTO `ac_viewlevels` (`id`, `title`, `ordering`, `rules`) VALUES
 --
 
 --
+-- Indexes for table `ac_akeeba_common`
+--
+ALTER TABLE `ac_akeeba_common`
+  ADD PRIMARY KEY (`key`);
+
+--
+-- Indexes for table `ac_ak_profiles`
+--
+ALTER TABLE `ac_ak_profiles`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `ac_ak_stats`
+--
+ALTER TABLE `ac_ak_stats`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idx_fullstatus` (`filesexist`,`status`),
+  ADD KEY `idx_stale` (`status`,`origin`);
+
+--
+-- Indexes for table `ac_ak_storage`
+--
+ALTER TABLE `ac_ak_storage`
+  ADD PRIMARY KEY (`tag`);
+
+--
 -- Indexes for table `ac_assets`
 --
 ALTER TABLE `ac_assets`
@@ -1870,6 +1975,17 @@ ALTER TABLE `ac_assets`
 ALTER TABLE `ac_associations`
   ADD PRIMARY KEY (`context`,`id`),
   ADD KEY `idx_key` (`key`);
+
+--
+-- Indexes for table `ac_banners`
+--
+ALTER TABLE `ac_banners`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idx_state` (`state`),
+  ADD KEY `idx_own_prefix` (`own_prefix`),
+  ADD KEY `idx_metakey_prefix` (`metakey_prefix`),
+  ADD KEY `idx_banner_catid` (`catid`),
+  ADD KEY `idx_language` (`language`);
 
 --
 -- Indexes for table `ac_banner_clients`
@@ -1887,17 +2003,6 @@ ALTER TABLE `ac_banner_tracks`
   ADD KEY `idx_track_date` (`track_date`),
   ADD KEY `idx_track_type` (`track_type`),
   ADD KEY `idx_banner_id` (`banner_id`);
-
---
--- Indexes for table `ac_banners`
---
-ALTER TABLE `ac_banners`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `idx_state` (`state`),
-  ADD KEY `idx_own_prefix` (`own_prefix`),
-  ADD KEY `idx_metakey_prefix` (`metakey_prefix`),
-  ADD KEY `idx_banner_catid` (`catid`),
-  ADD KEY `idx_language` (`language`);
 
 --
 -- Indexes for table `ac_categories`
@@ -1941,6 +2046,17 @@ ALTER TABLE `ac_content`
   ADD KEY `idx_xreference` (`xreference`);
 
 --
+-- Indexes for table `ac_contentitem_tag_map`
+--
+ALTER TABLE `ac_contentitem_tag_map`
+  ADD UNIQUE KEY `uc_ItemnameTagid` (`type_id`,`content_item_id`,`tag_id`),
+  ADD KEY `idx_tag_type` (`tag_id`,`type_id`),
+  ADD KEY `idx_date_id` (`tag_date`,`tag_id`),
+  ADD KEY `idx_tag` (`tag_id`),
+  ADD KEY `idx_type` (`type_id`),
+  ADD KEY `idx_core_content_id` (`core_content_id`);
+
+--
 -- Indexes for table `ac_content_frontpage`
 --
 ALTER TABLE `ac_content_frontpage`
@@ -1958,17 +2074,6 @@ ALTER TABLE `ac_content_rating`
 ALTER TABLE `ac_content_types`
   ADD PRIMARY KEY (`type_id`),
   ADD KEY `idx_alias` (`type_alias`);
-
---
--- Indexes for table `ac_contentitem_tag_map`
---
-ALTER TABLE `ac_contentitem_tag_map`
-  ADD UNIQUE KEY `uc_ItemnameTagid` (`type_id`,`content_item_id`,`tag_id`),
-  ADD KEY `idx_tag_type` (`tag_id`,`type_id`),
-  ADD KEY `idx_date_id` (`tag_date`,`tag_id`),
-  ADD KEY `idx_tag` (`tag_id`),
-  ADD KEY `idx_type` (`type_id`),
-  ADD KEY `idx_core_content_id` (`core_content_id`);
 
 --
 -- Indexes for table `ac_extensions`
@@ -2345,6 +2450,12 @@ ALTER TABLE `ac_ucm_history`
   ADD KEY `idx_save_date` (`save_date`);
 
 --
+-- Indexes for table `ac_updates`
+--
+ALTER TABLE `ac_updates`
+  ADD PRIMARY KEY (`update_id`);
+
+--
 -- Indexes for table `ac_update_sites`
 --
 ALTER TABLE `ac_update_sites`
@@ -2357,10 +2468,24 @@ ALTER TABLE `ac_update_sites_extensions`
   ADD PRIMARY KEY (`update_site_id`,`extension_id`);
 
 --
--- Indexes for table `ac_updates`
+-- Indexes for table `ac_usergroups`
 --
-ALTER TABLE `ac_updates`
-  ADD PRIMARY KEY (`update_id`);
+ALTER TABLE `ac_usergroups`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `idx_usergroup_parent_title_lookup` (`parent_id`,`title`),
+  ADD KEY `idx_usergroup_title_lookup` (`title`),
+  ADD KEY `idx_usergroup_adjacency_lookup` (`parent_id`),
+  ADD KEY `idx_usergroup_nested_set_lookup` (`lft`,`rgt`) USING BTREE;
+
+--
+-- Indexes for table `ac_users`
+--
+ALTER TABLE `ac_users`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idx_name` (`name`),
+  ADD KEY `idx_block` (`block`),
+  ADD KEY `username` (`username`),
+  ADD KEY `email` (`email`);
 
 --
 -- Indexes for table `ac_user_keys`
@@ -2393,26 +2518,6 @@ ALTER TABLE `ac_user_usergroup_map`
   ADD PRIMARY KEY (`user_id`,`group_id`);
 
 --
--- Indexes for table `ac_usergroups`
---
-ALTER TABLE `ac_usergroups`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `idx_usergroup_parent_title_lookup` (`parent_id`,`title`),
-  ADD KEY `idx_usergroup_title_lookup` (`title`),
-  ADD KEY `idx_usergroup_adjacency_lookup` (`parent_id`),
-  ADD KEY `idx_usergroup_nested_set_lookup` (`lft`,`rgt`) USING BTREE;
-
---
--- Indexes for table `ac_users`
---
-ALTER TABLE `ac_users`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `idx_name` (`name`),
-  ADD KEY `idx_block` (`block`),
-  ADD KEY `username` (`username`),
-  ADD KEY `email` (`email`);
-
---
 -- Indexes for table `ac_viewlevels`
 --
 ALTER TABLE `ac_viewlevels`
@@ -2424,19 +2529,29 @@ ALTER TABLE `ac_viewlevels`
 --
 
 --
+-- AUTO_INCREMENT for table `ac_ak_profiles`
+--
+ALTER TABLE `ac_ak_profiles`
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `ac_ak_stats`
+--
+ALTER TABLE `ac_ak_stats`
+  MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `ac_assets`
 --
 ALTER TABLE `ac_assets`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',AUTO_INCREMENT=65;
---
--- AUTO_INCREMENT for table `ac_banner_clients`
---
-ALTER TABLE `ac_banner_clients`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',AUTO_INCREMENT=66;
 --
 -- AUTO_INCREMENT for table `ac_banners`
 --
 ALTER TABLE `ac_banners`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `ac_banner_clients`
+--
+ALTER TABLE `ac_banner_clients`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `ac_categories`
@@ -2462,7 +2577,7 @@ ALTER TABLE `ac_content_types`
 -- AUTO_INCREMENT for table `ac_extensions`
 --
 ALTER TABLE `ac_extensions`
-  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=701;
+  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=704;
 --
 -- AUTO_INCREMENT for table `ac_finder_filters`
 --
@@ -2497,7 +2612,7 @@ ALTER TABLE `ac_languages`
 -- AUTO_INCREMENT for table `ac_menu`
 --
 ALTER TABLE `ac_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=108;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=110;
 --
 -- AUTO_INCREMENT for table `ac_menu_types`
 --
@@ -2527,7 +2642,7 @@ ALTER TABLE `ac_overrider`
 -- AUTO_INCREMENT for table `ac_postinstall_messages`
 --
 ALTER TABLE `ac_postinstall_messages`
-  MODIFY `postinstall_message_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `postinstall_message_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `ac_redirect_links`
 --
@@ -2554,25 +2669,15 @@ ALTER TABLE `ac_ucm_content`
 ALTER TABLE `ac_ucm_history`
   MODIFY `version_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT for table `ac_update_sites`
---
-ALTER TABLE `ac_update_sites`
-  MODIFY `update_site_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
---
 -- AUTO_INCREMENT for table `ac_updates`
 --
 ALTER TABLE `ac_updates`
   MODIFY `update_id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `ac_user_keys`
+-- AUTO_INCREMENT for table `ac_update_sites`
 --
-ALTER TABLE `ac_user_keys`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `ac_user_notes`
---
-ALTER TABLE `ac_user_notes`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `ac_update_sites`
+  MODIFY `update_site_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `ac_usergroups`
 --
@@ -2583,6 +2688,16 @@ ALTER TABLE `ac_usergroups`
 --
 ALTER TABLE `ac_users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=27;
+--
+-- AUTO_INCREMENT for table `ac_user_keys`
+--
+ALTER TABLE `ac_user_keys`
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `ac_user_notes`
+--
+ALTER TABLE `ac_user_notes`
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `ac_viewlevels`
 --
