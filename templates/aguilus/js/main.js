@@ -79,9 +79,11 @@ jQuery(function($) {
 	function onScroll() {
 		if ($(window).scrollTop() > 50) {
 			$('nav.original').css('opacity', '0');
+			$('h4.logo').css('opacity', '1');
 			$('nav.navbar-fixed-top').css('opacity', '1');
 		} else {
 			$('nav.original').css('opacity', '1');
+			$('h4.logo').css('opacity', '0');
 			$('nav.navbar-fixed-top').css('opacity', '0');
 		}
 	}

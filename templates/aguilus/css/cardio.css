@@ -194,6 +194,23 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 	color: #bbb;
 }
 
+h1.header {
+	font-family: 'Halant', serif;
+}
+
+h3.header {
+
+}
+
+h4.logo {
+	opacity: 0;
+	font-family: 'Halant', serif;
+}
+
+h4.logo span {
+	font-size: 15px;
+}
+
 .icon-bar {
 	background: #bbb;
 }
@@ -459,6 +476,9 @@ section {
 
 .services {
 	margin: 40px 0;
+}
+.services li {
+	color: #fff;
 }
 
 .service {
