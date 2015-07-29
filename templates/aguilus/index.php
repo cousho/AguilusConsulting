@@ -104,7 +104,7 @@ $jsLibPath = $jsPath.'vendor/';
 				<h4 class="light muted">Aguilus Consulting Services (ACS), is helping businesses improve their employment relationships and organisation systems; and, are committed to helping their clients stimulate employment growth in Australia.</h4>
 			</div>
 			<div class="row about">
-				<h3>Company profile - what, when, where and who:</h3>
+				<h3>Company profile :</h3>
 				<p>ACS is a specialist consultancy firm that was established in Melbourne in 2012 to:</p>
 				<ul>
 					<li>Assist employers build the most effective  employment relationships with their employees</li>
@@ -175,9 +175,8 @@ $jsLibPath = $jsPath.'vendor/';
 				</div>
 				<div class="col-sm-4 text-right text-center-mobile">
 					<ul class="social-footer">
-						<li><a href="h#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="http://www.facebook.com/aguilusconsulting" target="_blank"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="https://au.linkedin.com/pub/joe-aguilus-mba/99/177/4b8" target="_blank"><i class="fa fa-linkedin"></i></a></li>
 					</ul>
 				</div>
 			</div>
