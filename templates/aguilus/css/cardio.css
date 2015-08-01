@@ -65,8 +65,13 @@ h6 {
 }
 
 h1 {
-	font-size: 60px;
+	font-size: 80px;
 }
+
+h1 span{
+	font-size: 65px;
+}
+
 
 h2 {
 	font-size: 48px;
@@ -1029,10 +1034,18 @@ footer .social-footer li:hover a {
 .shadow {
 	text-shadow: 1px 2px 10px #c5dcf3;
 }
+
+.shadow2 {
+	text-shadow: 1px 2px 10px #043974;
+}
 /* Colors */
 
 .white {
 	color: white;
+}
+
+.floral-white {
+	color: #000033;
 }
 
 .light-white {
@@ -1051,6 +1064,9 @@ footer .social-footer li:hover a {
 	color: #043974;
 }
 
+.light-blue {
+	color: #9EC0FE;
+}
 .blue-bg {
 	background: #065484;
 }
@@ -1065,7 +1081,7 @@ footer .social-footer li:hover a {
 
 @media(max-width:992px) {
 	h1 {
-		font-size: 36px;
+		font-size: 80px;
 	}
 	h2 {
 		font-size: 28px;
