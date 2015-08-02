@@ -120,6 +120,7 @@ $jsLibPath = $jsPath.'vendor/';
 		<div class="cut cut-bottom"></div>
 	</section>
 	<section id="services" class="section section-padded blue-bg">
+		<div class="cut cut-top"></div>
 		<div class="container">
 			<div class="row text-center title">
 				<h2 class="white">Services</h2>
