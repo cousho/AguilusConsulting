@@ -72,7 +72,7 @@ $jsLibPath = $jsPath.'vendor/';
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="bold blue logo">A<span>GUILUS CONSULTING</span></h4>
+				<h4 class="bold blue logo">A<span>GUILUS CONSULTING SERVICES</span></h4>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -88,8 +88,8 @@ $jsLibPath = $jsPath.'vendor/';
 				<div class="header-text">
 					<div class="row">
 						<div class="col-md-12 text-center">
-							<h1 class="bold blue shadow header">A<span>GUILUS CONSULTING</span></h1>
-							<h3 class="blue typed shadow header">Improving employment relationships and organisational systems</h3>
+							<h1 class="bold white shadow2 header">A<span>GUILUS CONSULTING SERVICES</span></h1>
+							<h3 class="floral-white typed shadow header">Improving employment relationships and organisational systems</h3>
 						</div>
 					</div>
 				</div>
@@ -101,11 +101,11 @@ $jsLibPath = $jsPath.'vendor/';
 		<div class="container">
 			<div class="row text-center title">
 				<h2>About Us</h2>
-				<h4 class="light muted">Aguilus Consulting Services (ACS), is helping businesses improve their employment relationships and organisation systems; and, are committed to helping their clients stimulate employment growth in Australia.</h4>
+				<h4 class="light muted">Aguilus Consulting Services, is helping businesses improve their employment relationships and organisation systems; and, are committed to helping their clients stimulate employment growth in Australia.</h4>
 			</div>
 			<div class="row about">
-				<h3>Company profile - what, when, where and who:</h3>
-				<p>ACS is a specialist consultancy firm that was established in Melbourne in 2012 to:</p>
+				<p>			</p>
+				<p>Aguilus Consulting Services is a specialist consultancy firm that was established in Melbourne in 2012 to:</p>
 				<ul>
 					<li>Assist employers build the most effective  employment relationships with their employees</li>
 					<li>Provide businesses with effective and efficient organisational systems</li>
@@ -113,7 +113,7 @@ $jsLibPath = $jsPath.'vendor/';
 					<li>Assist businesses to build their competitiveness and maintain their viability in an ever changing environment.</li>
 				</ul>
 
-				<p>The lead Director of ACS, Joe Aguilus, is a qualified and experienced HR Professional with a Master of Business (Industrial Relations & Human Resources Management) and a Master of Business Administration. He has a background of working with small, medium to large organisations, both in the public and private sectors. Throughout his HR career, Joe has helped organisations with complex change management implementations and the management of their employee lifecycles.</p>
+				<p>The lead Director of Aguilus Consulting Services, Joe Aguilus, is a qualified and experienced HR Professional with a Master of Business (Industrial Relations & Human Resources Management) and a Master of Business Administration. He has a background of working with small, medium to large organisations, both in the public and private sectors. Throughout his HR career, Joe has helped organisations with complex change management implementations and the management of their employee lifecycles.</p>
 				
 			</div>
 		</div>
@@ -124,7 +124,7 @@ $jsLibPath = $jsPath.'vendor/';
 		<div class="container">
 			<div class="row text-center title">
 				<h2 class="white">Services</h2>
-				<h4 class="light white">ACS provides specialist assistance to businesses for all aspect of their Human Resources, Industrial Relations and Change Management requirements, including:</h4>
+				<h4 class="light white">Aguilus Consulting Services provides specialist assistance to businesses for all aspect of their Human Resources, Industrial Relations and Change Management requirements, including:</h4>
 			</div>
 			<div class="row services">
 				<ul>
@@ -172,15 +172,18 @@ $jsLibPath = $jsPath.'vendor/';
 			
 			<div class="row bottom-footer text-center-mobile">
 				<div class="col-sm-8">
-					<p class="white">&copy; 2015 All Rights Reserved.</p>
+					<p class="white phone">M +61 425 412 072</p>
 				</div>
-				<div class="col-sm-4 text-right text-center-mobile">
+				<div class="col-sm-8">
 					<ul class="social-footer">
-						<li><a href="h#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="http://www.facebook.com/aguilusconsulting" target="_blank"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="https://au.linkedin.com/pub/joe-aguilus-mba/99/177/4b8" target="_blank"><i class="fa fa-linkedin"></i></a></li>
 					</ul>
 				</div>
+				<div class="col-sm-8">
+					<p class="white copy">&copy; Aguilus Consulting Services 2015</p>
+				</div>
+				
 			</div>
 		</div>
 	</footer>

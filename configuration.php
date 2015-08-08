@@ -13,8 +13,8 @@ class JConfig {
 	public $debug_lang = '0';
 	public $dbtype = 'mysql';
 	public $host = 'localhost';
-	public $user = 'acdb_user';
-	public $password = 'P@ssw0rd';
+	public $user = 'root';
+	public $password = 'root';
 	public $db = 'acdb';
 	public $dbprefix = 'ac_';
 	public $live_site = '';
