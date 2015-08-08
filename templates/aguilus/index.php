@@ -37,7 +37,7 @@ $doc->addStyleSheet($templatePath . '/css/owl.css');
 $doc->addStyleSheet($templatePath . '/css/animate.css');
 $doc->addStyleSheet($templatePath . '/fonts/font-awesome-4.1.0/css/font-awesome.min.css');
 $doc->addStyleSheet($templatePath . '/fonts/eleganticons/et-icons.css');
-$doc->addStyleSheet($templatePath . '/css/cardio.css');
+$doc->addStyleSheet($templatePath . '/css/template.css');
 
 
 /* js */
@@ -72,7 +72,8 @@ $jsLibPath = $jsPath.'vendor/';
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="bold blue logo">A<span>GUILUS CONSULTING SERVICES</span></h4>
+				<h4 class="bold blue logo">	<img lass="logo" src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/img/logo.png" data-active-url="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/img/logo.png" alt=""></a>
+A<span>GUILUS CONSULTING SERVICES</span></h4>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -158,12 +159,13 @@ $jsLibPath = $jsPath.'vendor/';
 			<div class="modal-content modal-popup">
 				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
 				<h3 class="white">Contact Us</h3>
-				<form action="" class="popup-form">
+				<jdoc:include type="modules" name="contact" style="none" />
+				<!--<form action="" class="popup-form">
 					<input type="text" class="form-control form-white" placeholder="Full Name">
 					<input type="text" class="form-control form-white" placeholder="Email Address">
 					<textarea placeholder="Message" class="form-control form-white"></textarea>
 					<button type="submit" class="btn btn-submit">Submit</button>
-				</form>
+				</form>-->
 			</div>
 		</div>
 	</div>
