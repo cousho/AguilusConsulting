@@ -124,6 +124,19 @@ header {
 	background-size: cover;
 }
 
+.weather {
+	position: absolute;
+    bottom: 100px;
+    right: 10px;
+    padding: 10px;
+   	background: rgba(255, 255, 255, 0.70);
+
+}
+
+.weather  p{
+	color: #000;
+}
+
 header .table {
 	display: table;
 	height: 100%;
@@ -167,7 +180,7 @@ a {
 /* Navigation Bar ( Navbar ) */
 
 nav.navbar {
-	position: absolute;
+	position: fixed;
 	z-index: 9500;
 	width: 100%;
 	width: 100vw;
@@ -183,8 +196,8 @@ nav.navbar .navbar-nav li.active a:not(.btn) {
 nav.navbar-fixed-top {
 	z-index: 9499;
 	top: 0;
-	padding: 25px 0;
-	opacity: 0;
+	padding: 5px 0;
+	opacity: 1m;
 	background: white;
 	box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.05);
 }
@@ -200,9 +213,11 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 }
 
 .logo img {
+	opacity: 0;
 	max-height: 50px;
 	max-width: 50px;
 }
+
 
 h1.header {
 	font-family: 'Halant', serif;
@@ -213,11 +228,18 @@ h3.header {
 }
 
 h4.logo {
-	opacity: 0;
+
 	font-family: 'Halant', serif;
+
 }
 
 h4.logo span {
+	opacity: 1;
+	color: #043974;
+
+}
+
+h4.logo span.small {
 	font-size: 15px;
 }
 
@@ -298,6 +320,12 @@ h4.logo span {
 
 .navbar {
 	top: 50px;
+}
+
+.navbar-toggle {
+	position: absolute;
+	right: 20px;
+	top: 10px;
 }
 
 .container {

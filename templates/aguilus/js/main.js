@@ -46,8 +46,10 @@ jQuery(function($) {
 		});
 
 		// Navbar Init
-		$('nav').addClass('original').clone().insertAfter('nav').addClass('navbar-fixed-top').css('position', 'fixed').css('top', '0').css('margin-top', '0').removeClass('original');
-		$('.mobile-nav ul').html($('nav .navbar-nav').html());
+		//$('nav').addClass('original').clone().insertAfter('nav').addClass('navbar-fixed-top').css('position', 'fixed').css('top', '0').css('margin-top', '0').removeClass('original');
+		//$('.mobile-nav ul').html($('nav .navbar-nav').html());
+
+		$('.mobile-nav ul').removeClass();
 		$('nav.navbar-fixed-top .navbar-brand img').attr('src', $('nav.navbar-fixed-top .navbar-brand img').data("active-url"));
 
 		// Typing Intro Init
@@ -75,17 +77,20 @@ jQuery(function($) {
 			filter: ':not(.btn)'
 		});
 	});
+
 	// Window Scroll
 	function onScroll() {
-		if ($(window).scrollTop() > 50) {
+		/*if ($(window).scrollTop() > 50) {
 			$('nav.original').css('opacity', '0');
-			$('h4.logo').css('opacity', '1');
+			$('h4.logo span').css('opacity', '1');
+			$('h4.logo span').css('color', '#043974');
 			$('nav.navbar-fixed-top').css('opacity', '1');
 		} else {
 			$('nav.original').css('opacity', '1');
-			$('h4.logo').css('opacity', '0');
+			$('h4.logo span').css('opacity', '1');
+			$('h4.logo span').css('color', 'white');
 			$('nav.navbar-fixed-top').css('opacity', '0');
-		}
+		}*/
 	}
 
 	window.addEventListener('scroll', onScroll, false);
@@ -111,7 +116,7 @@ jQuery(function($) {
 		$('.mobile-nav').addClass('active');
 	});
 
-	$('body').on('click', '.mobile-nav a', function(event) {
+	$('body').on('click', '.mobile-nav a:not(.contact)', function(event) {
 		$('.mobile-nav').removeClass('active');
 		if(!this.hash) return;
 		event.preventDefault();

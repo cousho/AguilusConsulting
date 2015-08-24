@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Melbourne, AU</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Melbourne__AU/*http://weather.yahoo.com/forecast/ASXX0075_c.html</link>
+<description>Yahoo! Weather for Melbourne, AU</description>
+<language>en-us</language>
+<lastBuildDate>Mon, 24 Aug 2015 10:29 pm AEST</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Melbourne" region="VIC"   country="Australia"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="7"   direction="160"   speed="25.75" />
+<yweather:atmosphere humidity="76"  visibility="9.99"  pressure="1015.92"  rising="0" />
+<yweather:astronomy sunrise="6:52 am"   sunset="5:52 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Melbourne, AU at 10:29 pm AEST</title>
+<geo:lat>-37.87</geo:lat>
+<geo:long>145.1</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Melbourne__AU/*http://weather.yahoo.com/forecast/ASXX0075_c.html</link>
+<pubDate>Mon, 24 Aug 2015 10:29 pm AEST</pubDate>
+<yweather:condition  text="Mostly Cloudy"  code="27"  temp="10"  date="Mon, 24 Aug 2015 10:29 pm AEST" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/27.gif"/><br />
+<b>Current Conditions:</b><br />
+Mostly Cloudy, 10 C<BR />
+<BR /><b>Forecast:</b><BR />
+Mon - Mostly Cloudy. High: 13 Low: 8<br />
+Tue - Mostly Cloudy. High: 15 Low: 7<br />
+Wed - Cloudy. High: 16 Low: 7<br />
+Thu - Showers. High: 14 Low: 8<br />
+Fri - AM Showers. High: 14 Low: 6<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Melbourne__AU/*http://weather.yahoo.com/forecast/ASXX0075_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Mon" date="24 Aug 2015" low="8" high="13" text="Mostly Cloudy" code="27" />
+<yweather:forecast day="Tue" date="25 Aug 2015" low="7" high="15" text="Mostly Cloudy" code="28" />
+<yweather:forecast day="Wed" date="26 Aug 2015" low="7" high="16" text="Cloudy" code="26" />
+<yweather:forecast day="Thu" date="27 Aug 2015" low="8" high="14" text="Showers" code="11" />
+<yweather:forecast day="Fri" date="28 Aug 2015" low="6" high="14" text="AM Showers" code="39" />
+<guid isPermaLink="false">ASXX0075_2015_08_28_7_00_AEST</guid>
+</item>
+</channel>
+</rss>
+
+<!-- fan1656.sports.bf1.yahoo.com Mon Aug 24 05:54:21 PDT 2015 -->

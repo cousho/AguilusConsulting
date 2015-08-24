@@ -61,10 +61,12 @@ $jsLibPath = $jsPath.'vendor/';
 	<div class="preloader">
 		<img src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/img/loader.gif" alt="Preloader image">
 	</div>
-	<nav class="navbar">
+	<nav class="navbar navbar-fixed-top">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
+					<h4 class="bold blue logo">	<img class="logo" src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/img/logo.jpg" data-active-url="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/img/logo.jpg" alt=""></a>
+<span class="big">A</span><span class="small">GUILUS CONSULTING SERVICES</span></h4>
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
@@ -72,8 +74,7 @@ $jsLibPath = $jsPath.'vendor/';
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="bold blue logo">	<img lass="logo" src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/img/logo.png" data-active-url="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/img/logo.png" alt=""></a>
-A<span>GUILUS CONSULTING SERVICES</span></h4>
+				
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -89,11 +90,20 @@ A<span>GUILUS CONSULTING SERVICES</span></h4>
 				<div class="header-text">
 					<div class="row">
 						<div class="col-md-12 text-center">
-							<h1 class="bold white shadow2 header">A<span>GUILUS CONSULTING SERVICES</span></h1>
-							<h3 class="floral-white typed shadow header">Improving employment relationships and organisational systems</h3>
+							<h3 class="white typed shadow header">Improving employment relationships and organisational systems</h3>
+
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="weather">
+			<!-- weather widget start >
+				<a href="//www.booked.net/weather/melbourne-30354">
+					<img src="//w.bookcdn.com/weather/picture/25_30354_1_1_3658db_250_2a48ba_ffffff_ffffff_1_2071c9_ffffff_0_3.png?scode=124&domid=w209" />
+				</a>
+			<!-- weather widget end -->
+							<jdoc:include type="modules" name="weather" style="none" />
+
 			</div>
 		</div>
 	</header>
@@ -105,17 +115,8 @@ A<span>GUILUS CONSULTING SERVICES</span></h4>
 				<h4 class="light muted">Aguilus Consulting Services, is helping businesses improve their employment relationships and organisation systems; and, are committed to helping their clients stimulate employment growth in Australia.</h4>
 			</div>
 			<div class="row about">
-				<p>			</p>
-				<p>Aguilus Consulting Services is a specialist consultancy firm that was established in Melbourne in 2012 to:</p>
-				<ul>
-					<li>Assist employers build the most effective  employment relationships with their employees</li>
-					<li>Provide businesses with effective and efficient organisational systems</li>
-					<li>Provide Human Resources Management, Industrial Relations and Change Management consulting services</li>
-					<li>Assist businesses to build their competitiveness and maintain their viability in an ever changing environment.</li>
-				</ul>
+				<jdoc:include type="modules" name="about" style="none" />
 
-				<p>The lead Director of Aguilus Consulting Services, Joe Aguilus, is a qualified and experienced HR Professional with a Master of Business (Industrial Relations & Human Resources Management) and a Master of Business Administration. He has a background of working with small, medium to large organisations, both in the public and private sectors. Throughout his HR career, Joe has helped organisations with complex change management implementations and the management of their employee lifecycles.</p>
-				
 			</div>
 		</div>
 		<div class="cut cut-bottom"></div>
@@ -128,18 +129,8 @@ A<span>GUILUS CONSULTING SERVICES</span></h4>
 				<h4 class="light white">Aguilus Consulting Services provides specialist assistance to businesses for all aspect of their Human Resources, Industrial Relations and Change Management requirements, including:</h4>
 			</div>
 			<div class="row services">
-				<ul>
-					<li>HR, IR and change strategy formulation</li>
-					<li>Coaching of Executives and Managers</li>
-					<li>Pay structure, incentives and benefits</li>
-					<li>Workplace mediation and representation</li>
+				<jdoc:include type="modules" name="services" style="none" />
 
-					<li>Conflict and performance management</li>
-					<li>Recruitment and selection</li>
-					<li>Job analysis and design</li>
-					<li>Development of HR policies, processes, procedures and documentation</li>
-					<li>Career transition assistance.</li>
-				</ul>
 				
 			</div>
 		</div>
@@ -150,6 +141,7 @@ A<span>GUILUS CONSULTING SERVICES</span></h4>
 		<div class="row text-center title">
 				<h2>Blog</h2>
 				<h4 class="blue light">We ask for your patience as we start our online journey.</h4>
+				
 			</div>
 		</div>
 	</section>
@@ -160,21 +152,16 @@ A<span>GUILUS CONSULTING SERVICES</span></h4>
 				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
 				<h3 class="white">Contact Us</h3>
 				<jdoc:include type="modules" name="contact" style="none" />
-				<!--<form action="" class="popup-form">
-					<input type="text" class="form-control form-white" placeholder="Full Name">
-					<input type="text" class="form-control form-white" placeholder="Email Address">
-					<textarea placeholder="Message" class="form-control form-white"></textarea>
-					<button type="submit" class="btn btn-submit">Submit</button>
-				</form>-->
 			</div>
 		</div>
 	</div>
 	<footer>
 		<div class="container">
-			
 			<div class="row bottom-footer text-center-mobile">
 				<div class="col-sm-8">
 					<p class="white phone">M +61 425 412 072</p>
+					<p class="white phone">PO BOX 1088</p>
+					<p class="white phone">Hawsburn, VIC 3142</p>
 				</div>
 				<div class="col-sm-8">
 					<ul class="social-footer">
@@ -191,8 +178,7 @@ A<span>GUILUS CONSULTING SERVICES</span></h4>
 	</footer>
 	<!-- Holder for mobile navigation -->
 	<div class="mobile-nav">
-		<ul>
-		</ul>
+		<jdoc:include type="modules" name="navigation" style="none" />
 		<a href="#" class="close-link"><i class="arrow_up"></i></a>
 	</div>
 	<!-- Scripts -->
